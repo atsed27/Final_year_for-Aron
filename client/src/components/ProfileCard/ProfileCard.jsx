@@ -5,7 +5,8 @@ import Profile from "../../img/profileImg.jpg";
 import { Link, useParams ,useNavigate} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createChatPair } from "../../actions/ChatActions.js";
-
+import { UilPen } from "@iconscout/react-unicons";
+import ProfileModal from "../ProfileModal/ProfileModal"
 const ProfileCard = ({ profUserData }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const ProfileCard = ({ profUserData }) => {
   const profileUserId = params.id;
   const [profileUser, setProfileUser] = useState({});
   const [chatStart, setChatStart] = useState({});
+  const [modalOpened, setModalOpened] = useState(false);
 
   const makeChatPair = async () => {
     const senderAndReceiver = {
@@ -71,8 +73,20 @@ const ProfileCard = ({ profUserData }) => {
         <span>
           {profileUser?.firstname} {profileUser?.lastname}
         </span>
-        <span>
+        <span className = 'modalWith'>
           {profileUser?.worksAt ? profileUser.worksAt : "Write about yourself"}
+          <div className = 'modal'>
+            <UilPen
+              width="2rem"
+              height="1.2rem"
+              onClick={() => setModalOpened(true)}
+            />
+            <ProfileModal
+              modalOpened={modalOpened}
+              setModalOpened={setModalOpened}
+              data = {user}
+            />
+          </div>
         </span>
       </div>
 

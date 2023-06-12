@@ -9,7 +9,7 @@ import { userChats } from "../../api/ChatRequests";
 import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import NavBar from "../../components/NavBar/NavBar";
-
+import NavBara from '../../components/Mynavbar/Navbar'
 const Chat = () => {
   const dispatch = useDispatch();
   const socket = useRef();
@@ -68,7 +68,7 @@ const Chat = () => {
 
   return (
     <> 
-     <NavBar />
+     <NavBara />
     <div className="Chat">
     
       {/* Left Side */}

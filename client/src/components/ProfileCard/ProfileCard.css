@@ -88,9 +88,6 @@
   border-left: 2px solid var(--hrColor);
 }
 
-
-
-
 .ProfileCard>span
 {
     font-weight: bold;
@@ -98,4 +95,18 @@
     align-self: center;
     margin-bottom: 1rem;
     cursor: pointer;
+}
+
+.modal{
+  display:none;
+}
+@media  screen and (max-width: 600px){
+  .modal{
+    display:flex;
+  }
+  .modalWith{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

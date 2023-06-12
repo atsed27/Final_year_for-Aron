@@ -2,7 +2,7 @@ import { Modal, Textarea, useMantineTheme } from "@mantine/core";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createQuestion, updateQuestion } from "../../actions/QAActions";
-
+import './AskModal.css'
 export default function AskModal({ location, data, modalOpened, setModalOpened, category }) {
   const dispatch = useDispatch();
   const theme = useMantineTheme();
@@ -57,18 +57,18 @@ useEffect(()=>{
       }
       overlayOpacity={0.55}
       overlayBlur={3}
-      size="44rem"
+      size="100%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
       <form className="askForm" onSubmit={handleSubmit}>
         <h3>Put your Question below...</h3>
         <div className="formInputs">
-          <div style={{ marginBottom: "1rem" }}>
+          <div className = 'AskInput' >
             <input
              value={currentTitle}
              ref={title}
-              style={{ padding: ".5rem", width: "39rem" }}
+              
               type="text"
               className="askInput"
               name="title"
@@ -78,13 +78,12 @@ useEffect(()=>{
 
             />
           </div>
-          <div>
+          <div className='textAreaA'>
             <textarea
               value={currentQuestionText}
               ref={question}
-              style={{ height: "15rem", width: "39.1rem", padding: ".5rem" }}
               type="text"
-              className="askInput"
+              className="textArea"
               name="question"
               placeholder="your question"
               required
@@ -94,12 +93,7 @@ useEffect(()=>{
             />
           </div>
           <button
-            style={{
-              display: "flex",
-              width: "7rem",
-              height: "2rem",
-              marginLeft: "33rem",
-            }}
+            
             className="button askButton"
             type="submit"
           >

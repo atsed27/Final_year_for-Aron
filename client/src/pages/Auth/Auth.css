@@ -26,6 +26,13 @@
   height: 15rem;
   border-radius : 40%;
 }
+.infoForm>div{
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  width: 90%;
+}
+
 
 .Webname > h1 {
     font-size: 3rem;

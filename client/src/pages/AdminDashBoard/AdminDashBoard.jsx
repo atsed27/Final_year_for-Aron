@@ -10,7 +10,7 @@ import Table from './Table';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllUsers } from '../../actions/UserAction';
 import { reducers } from '../../reducers';
-
+import NavBara from '../../components/Mynavbar/Navbar'
 
 const AdminDashBoard = () => {
     const {users, loading} = useSelector((state) =>state.usersReducer);
@@ -21,26 +21,10 @@ const AdminDashBoard = () => {
     useEffect(()=>{
        dispatch(getAllUsers());
     },[])
-    // const data = [
-    //     { id: 1, username: 'john123', firstName: 'John', lastName: 'Doe', livesIn: 'New York', status: 'active', worksAt: 'ABC Corp' },
-    //     { id: 2, username: 'jane456', firstName: 'Jane', lastName: 'Smith', livesIn: 'Los Angeles', status: 'inactive', worksAt: 'XYZ Inc' },
-    //     { id: 3, username: 'bob789', firstName: 'Bob', lastName: 'Johnson', livesIn: 'Chicago', status: 'inactive', worksAt: 'LMN Co' },
-    //     { id: 4, username: 'dave', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 5, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 6, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 7, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 8, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 9, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 10, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 11, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 12, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 13, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-    //     { id: 14, username: 'sue101', firstName: 'Sue', lastName: 'Williams', livesIn: 'Seattle', status: 'active', worksAt: 'PQR Ltd' },
-
-    //   ];
+  
   return (
     <>
-      <NavBar />
+      <NavBara/>
      <div class="main-container">
         <div class="navcontainer">
             <nav class="nav">

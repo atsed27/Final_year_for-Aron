@@ -145,12 +145,7 @@ const Question = ({ question, answers }) => {
         <div className="answerTextArea">
           <textarea
             ref={ansValue}
-            style={{
-              height: "10rem",
-              width: "30rem",
-              padding: ".5rem",
-              borderRadius: "1rem",
-            }}
+            
             required
             type="text"
             className="answerInput"
@@ -159,9 +154,8 @@ const Question = ({ question, answers }) => {
           />
         </div>
         <div className="answerSubmit">
-          <button
+          <button className='answerbutton'
             onClick={() => submitAnswer()}
-            style={{ marginLeft: "27rem", marginTop: "1rem", padding: ".3rem" }}
           >
             Submit
           </button>

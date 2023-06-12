@@ -11,12 +11,13 @@
   display: flex;
   background-color: var(--inputColor);
   border-radius: 10px;
-  padding: 5px;
+  
 }
 .Search>input {
   background-color: transparent;
   border: none;
   outline: none;
+  
 }
 .s-icon {
   display: flex;
@@ -27,3 +28,15 @@
   padding: 4px;
   color: white;
 }
+
+
+@media only screen and (max-width: 600px){
+	.Search{
+    width:120px
+  }
+  .Search>input{
+    width:120px
+  }
+	
+
+} 

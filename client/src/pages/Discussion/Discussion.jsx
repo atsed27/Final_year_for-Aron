@@ -8,7 +8,7 @@ import DiscussionBox from "../../components/DiscussionBox/DiscussionBox";
 import NavBar from "../../components/NavBar/NavBar";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCategories } from "../../api/QARequests";
-
+import NavBara from '../../components/Mynavbar/Navbar'
 const Discussion = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.authReducer.authData);
@@ -39,9 +39,9 @@ const Discussion = () => {
   const [minimize, setMinimize] = useState(false);
   return (
     <>
-      <NavBar />
+      <NavBara/>
       <div
-        style={{ gridTemplateColumns: minimize ? "6rem auto" : "22% auto" }}
+        
         className="Discussion"
       >
         {/* Left side */}
@@ -49,21 +49,11 @@ const Discussion = () => {
           <div className="Discussion-container">
             <div className="categoryHeader">
               <div className="categoryText">
-                {minimize ? "" : <h3>Categories</h3>}
+                
               </div>
               <div className="menuIcon">
-                <img
-                  src={menuIcon}
-                  alt=""
-                  title="mimimize/maximize"
-                  style={{ cursor: "pointer", height: "2rem", width: "2rem" }}
-                  onClick={() => setMinimize((minimize) => !minimize)}
-                />
               </div>
             </div>
-
-            <hr style={{ width: "100%", border: "0.1px solid gray" }} />
-
             <div className="Discussion-list">
               {categories.map((category, id) => (
                 <div onClick={() => setCurrentCategory(category)}>

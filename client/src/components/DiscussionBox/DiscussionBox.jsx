@@ -49,7 +49,11 @@ if(category && category.category !== "ALL QUESTIONS"){
                   </div>
                 </div>
                 <div className='askButton'>
-                { (category.category !== "ALL QUESTIONS") && <button onClick={()=>setModalOpened(true)} style={{padding:".4rem", borderRadius: "12px", cursor: "pointer"}}>Ask Question</button>}
+                { (category.category !== "ALL QUESTIONS") && 
+                <button onClick={()=>setModalOpened(true)}
+                 style={{padding:".4rem", borderRadius: "12px", cursor: "pointer"}}>
+                  Ask Question
+                  </button>}
                 <AskModal location = {"new"} modalOpened={modalOpened} setModalOpened={setModalOpened} category={category}/>
                 </div>
               </div>

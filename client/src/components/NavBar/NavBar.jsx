@@ -8,7 +8,7 @@ const NavBar = () => {
     <>
       <div className="navBar">
         <LogoSearch />
-        <NavIcons />
+        
       </div>
     </>
   );

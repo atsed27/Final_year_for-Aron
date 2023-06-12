@@ -8,6 +8,7 @@ import { getProfileUser } from "../../actions/UserAction";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import NavBar from "../../components/NavBar/NavBar";
+import NavBara from '../../components/Mynavbar/Navbar'
 const Profile = () => {
   const dispatch = useDispatch();
   let { profileUserData } = useSelector((state) => state.authReducer);
@@ -20,7 +21,7 @@ const Profile = () => {
   return (
     <>
       <div>
-        <NavBar />
+        <NavBara/>
       </div>
       <div className="Profile">
         <ProfileLeft profileUserData={profileUserData} />

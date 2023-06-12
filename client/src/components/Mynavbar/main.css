@@ -14,16 +14,28 @@
 	--textColor: #eee;
 }
 
+.HED{
+	background-color: #29335c;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navHED{
+	display:flex;
+	margin-top:1rem
+}
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: var(--mainColor);
+	background-color: green;
 	color: var(--textColor);
 }
-
+.PostShare1{
+	display:none;
+}
 nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
@@ -51,6 +63,7 @@ nav {
 	display: flex;
 	align-items: center;
 }
+
 
 @media only screen and (max-width: 1024px) {
 	header .nav-btn {
@@ -87,3 +100,12 @@ nav {
 		font-size: 1.5rem;
 	}
 }
+
+@media only screen and (max-width: 600px){
+	
+	.nav-btn{
+		margin-top:1rem;
+		
+	}
+
+} 

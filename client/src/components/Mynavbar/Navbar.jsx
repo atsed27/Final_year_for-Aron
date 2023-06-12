@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./main.css";
-import NavIcons from "../NavIcons/NavIcons";
-
-
+import TextH from "../NavIcons/TextH";
+import LogoSearch from "../../components/LogoSearch/LogoSearch";
+import {  useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 function Navbar() {
 	const navRef = useRef();
 
@@ -14,24 +16,25 @@ function Navbar() {
 	};
 
 	return (
-		<header>
-			<h3>LOGO</h3>
+	 <header className = 'HED'>
+		<div className = 'navHED'>
+			<NavBar/>
+		</div>
 			<nav ref={navRef}>
-            
+				
+				<TextH />
+				
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
 					<FaTimes />
 				</button>
-				<NavIcons />
-				
 			</nav>
 			<button
 				className="nav-btn"
 				onClick={showNavbar}>
 				<FaBars />
 			</button>
-			
 		</header>
 	);
 }

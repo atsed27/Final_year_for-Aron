@@ -5,14 +5,14 @@ import SchoolAdvertSide from "../../components/SchoolAdvertSide/SchoolAdvertSide
 import LostAndFoundSide from "../../components/LostAndFoundSide/LostAndFoundSide";
 import AdvertCategories from "../../components/AdvertCategories/AdvertCategories";
 import { useParams } from "react-router-dom";
-
+import NavBara from '../../components/Mynavbar/Navbar'
 const Advert = () => {
   const [minimize, setMinimize] = useState(false);
   const params = useParams();
   const {advertChoise} = params;
   return (
     <>
-      <NavBar />
+      <NavBara />
       <div
         className="Advert"
       >

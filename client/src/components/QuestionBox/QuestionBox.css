@@ -34,3 +34,27 @@
 .detail>div:hover{
     cursor: pointer;
 }
+.answerInput{
+    height: 10rem;
+    width: 30rem;
+    padding: .5rem;
+    border-Radius: 1rem;
+}
+.answerbutton{
+    margin-Left: 27rem;
+     margin-Top:1rem ;
+    padding: .3rem;
+}
+@media  screen and (max-width: 600px){
+    .answerInput{
+        height: 10rem;
+        width: 15rem;
+        padding: .5rem;
+        border-Radius: 1rem;
+    }
+    .answerbutton{
+        margin-Left: 13rem;
+        margin-Top:1rem ;
+        padding: .3rem;
+    }
+  }

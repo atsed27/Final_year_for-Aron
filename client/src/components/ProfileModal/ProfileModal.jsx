@@ -70,13 +70,13 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
       }
       overlayOpacity={0.55}
       overlayBlur={3}
-      size="55%"
+      size="100%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
-      <form className="infoForm" onSubmit={handleSubmit}>
+      <form id="infoForm" onSubmit={handleSubmit}>
         <h3>Your Info</h3>
-        <div>
+        <div className ='Name'>
           <input
             value={formData.firstname}
             onChange={handleChange}
@@ -95,7 +95,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
           />
         </div>
 
-        <div>
+        <div className = 'works'>
           <input
             value={formData.worksAt}
             onChange={handleChange}
@@ -106,7 +106,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
           />
         </div>
 
-        <div>
+        <div className = 'livesIn'>
           <input
             value={formData.livesIn}
             onChange={handleChange}

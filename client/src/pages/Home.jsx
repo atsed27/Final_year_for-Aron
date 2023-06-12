@@ -8,7 +8,7 @@ import NavBara from '../components/Mynavbar/Navbar'
 const Home = () => {
   return (
     <>
-      <div>
+      <div className="NavBar">
         <NavBara />
       </div>
       <div className="Home">
